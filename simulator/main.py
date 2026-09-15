@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 import httpx
 
 API_URL = "http://127.0.0.1:8000/api/telemetry"
-DEVICE_ID = "trailer-001"
+DEVICE_ID = "trailer-002"
 TELEMETRY_INTERVAL_SECONDS = 1
 
 def generate_telemetry():
