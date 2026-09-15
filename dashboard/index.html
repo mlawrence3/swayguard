@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SwayGuard</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <main class="dashboard">
+        <header>
+            <div>
+                <h1>SwayGuard</h1>
+                <p>Trailer Stability Monitoring</p>
+            </div>
+
+            <div class="connection">
+                <span id="connection-indicator"></span>
+                <span id="connection-status">Waiting for telemetry</span>
+            </div>
+        </header>
+
+        <section class="metrics">
+            <article class="metric">
+                <span class="metric-label">Speed</span>
+                <strong id="speed">--</strong>
+                <span class="metric-unit">mph</span>
+            </article>
+
+            <article class="metric">
+                <span class="metric-label">Lateral Acceleration</span>
+                <strong id="lateral-acceleration">--</strong>
+                <span class="metric-unit">g</span>
+            </article>
+
+            <article class="metric">
+                <span class="metric-label">Yaw Rate</span>
+                <strong id="yaw-rate">--</strong>
+                <span class="metric-unit">deg/s</span>
+            </article>
+        </section>
+
+        <section class="device-information">
+            <h2>Device</h2>
+
+            <div class="device-row">
+                <span>Device ID</span>
+                <strong id="device-id">trailer-001</strong>
+            </div>
+
+            <div class="device-row">
+                <span>Last Telemetry</span>
+                <strong id="last-telemetry">--</strong>
+            </div>
+        </section>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>

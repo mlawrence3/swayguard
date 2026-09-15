@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1f2933;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #68737d;
+}
+
+.connection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#connection-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #9ca3af;
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.metric,
+.device-information {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid #e1e5e9;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    color: #68737d;
+    margin-bottom: 12px;
+}
+
+.metric strong {
+    font-size: 36px;
+}
+
+.metric-unit {
+    color: #68737d;
+    margin-top: 4px;
+}
+
+.device-information {
+    margin-top: 20px;
+}
+
+.device-information h2 {
+    margin-top: 0;
+}
+
+.device-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #e1e5e9;
+}
+
+@media (max-width: 700px) {
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+}

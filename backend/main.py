@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from backend.models import TelemetryReading
 from backend.state import get_device_state, update_device_state
 
@@ -27,3 +28,9 @@ def read_device_state(device_id: str):
             detail=f"Device '{device_id}' not found"
         )
     return state
+
+app.mount(
+    "/",
+    StaticFiles(directory="dashboard", html=True),
+    name="dashboard"
+)
