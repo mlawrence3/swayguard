@@ -42,7 +42,51 @@
                 <span class="metric-unit">deg/s</span>
             </article>
         </section>
+<section class="settings">
+    <h2>Sway Detection</h2>
 
+    <div class="settings-grid">
+        <label>
+            Warning Threshold
+            <input
+                id="warning-threshold"
+                type="number"
+                step="0.01"
+                min="0.01"
+            >
+            <span>g</span>
+        </label>
+
+        <label>
+            Alert Threshold
+            <input
+                id="alert-threshold"
+                type="number"
+                step="0.01"
+                min="0.01"
+            >
+            <span>g</span>
+        </label>
+
+        <label>
+            Brake Force
+            <input
+                id="brake-force"
+                type="number"
+                step="1"
+                min="0"
+                max="100"
+            >
+            <span>%</span>
+        </label>
+    </div>
+
+    <button id="save-settings">
+        Save Settings
+    </button>
+
+    <span id="settings-status"></span>
+</section>
         <section class="device-information">
             <h2>Device</h2>
 
