@@ -7,7 +7,7 @@ app = FastAPI()
 def health_check():
     return {"status": "healthy"}
     
-@app.post("/api/devices/telemetry")
+@app.post("/api/telemetry")
 def receive_telemetry(telemetry: TelemetryReading):
     return{
         "recevied": True,
